@@ -1,0 +1,11 @@
+# Ignore everything by default
+*
+
+# Allow the main index file and the image
+!index.html
+!肺腺癌介紹資訊圖.png
+!.gitignore
+
+# Allow the 1網頁 directory and its HTML files
+!1網頁/
+!1網頁/*.html
