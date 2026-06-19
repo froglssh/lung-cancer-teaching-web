@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【看 YT 學生物】不抽菸也會得肺癌！？肺癌為何榮登榜首？</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Microsoft JhengHei", "PingFang TC", "Noto Sans TC", sans-serif;
+            line-height: 1.8;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px 50px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        .header {
+            text-align: center;
+            padding-bottom: 30px;
+            border-bottom: 3px solid #667eea;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            color: #667eea;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        
+        .student-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        
+        .student-info span {
+            color: #555;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            font-size: 22px;
+            color: #764ba2;
+            font-weight: bold;
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .subsection-title {
+            font-size: 18px;
+            color: #555;
+            font-weight: bold;
+            margin: 20px 0 10px 0;
+        }
+        
+        .video-info {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .video-info p {
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        
+        .video-info strong {
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        .video-link {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            word-break: break-all;
+            border-bottom: 1px solid #667eea;
+        }
+        
+        .video-link:hover {
+            color: #764ba2;
+            border-bottom-color: #764ba2;
+        }
+        
+        .content-text {
+            font-size: 16px;
+            line-height: 1.9;
+            color: #444;
+            text-align: justify;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        table td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: left;
+        }
+        
+        table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        table tr:hover {
+            background-color: #e9ecef;
+        }
+        
+        .question {
+            background: #f0f4ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .question-number {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 17px;
+            margin-bottom: 10px;
+        }
+        
+        .question-text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .answer-space {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            min-height: 80px;
+            border: 2px dashed #ddd;
+        }
+        
+        .options {
+            margin: 15px 0;
+            font-size: 16px;
+        }
+        
+        .option {
+            margin: 8px 0;
+            padding-left: 10px;
+        }
+        
+        .reading-passage {
+            background: #fff9f0;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 2px solid #f0ad4e;
+            font-size: 16px;
+            line-height: 1.9;
+        }
+        
+        .reading-passage h3 {
+            color: #f0ad4e;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        
+        .reading-passage p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .experiment-table {
+            margin: 20px 0;
+        }
+        
+        .highlight {
+            background-color: #fff3cd;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 22px;
+            }
+            
+            .student-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            table {
+                font-size: 13px;
+            }
+            
+            table th, table td {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>【看 YT 學生物】不抽菸也會得肺癌！？肺癌為何榮登榜首？</h1>
+            <div class="student-info">
+                <span>班級：__________</span>
+                <span>座號：_____</span>
+                <span>姓名：__________</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">一、影片資訊</h2>
+            <div class="video-info">
+                <p><strong>● 主題：</strong>不抽菸也會得肺癌！？肺癌為何榮登榜首？難道是基因出問題了？【挺健康】</p>
+                <p><strong>● 網址：</strong><a href="https://www.youtube.com/watch?v=4tDDfywYftk" class="video-link" target="_blank">https://www.youtube.com/watch?v=4tDDfywYftk</a></p>
+                <p><strong>● 內容：</strong></p>
+                <p class="content-text">本影片探討了台灣肺癌成為發生人數與死亡率雙冠王的現況，並引用中研院登上國際頂尖期刊《Cell》的研究，揭示了台灣非吸菸女性肺癌的可能內生性原因——APOBEC 基因變異。影片更顛覆傳統觀念，介紹了《Nature》期刊的最新發現：空氣污染（PM2.5）致癌的主要機制可能不是直接誘發突變，而是透過引發「慢性發炎」來喚醒體內已存在的突變細胞。最後，影片展望了肺癌預防的新方向，包括正在研發的肺癌疫苗與抗發炎策略。</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">二、影片知識分析：解構肺癌</h2>
+            <p style="font-size: 16px; margin-bottom: 15px;">請根據影片內容及課堂討論，完成以下肺癌主要類型的比較分析表。</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>特徵 (Feature)</th>
+                        <th>小細胞肺癌 (SCLC)</th>
+                        <th>肺腺癌 (NSCLC - Adenocarcinoma)</th>
+                        <th>鱗狀細胞癌 (NSCLC - Squamous Cell)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>主要風險因子</strong></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><strong>好發位置</strong></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><strong>細胞型態</strong></td>
+                        <td>細胞小、胞質少</td>
+                        <td>腺體樣或乳頭狀結構</td>
+                        <td>鱗狀上皮樣</td>
+                    </tr>
+                    <tr>
+                        <td><strong>生長與轉移</strong></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><strong>早期症狀</strong></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">三、影片與課本知識連結</h2>
+            
+            <div class="question">
+                <div class="question-number">1.</div>
+                <div class="question-text">影片中提到，肺腺癌常被稱為「無聲的殺手」，因為早期幾乎沒有症狀。請根據高中生物課本對「呼吸系統」的介紹，從<span class="highlight">解剖構造</span>的角度解釋這個現象。</div>
+                <div class="answer-space">答：</div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">2.</div>
+                <div class="question-text">影片介紹了中研院的研究，發現台灣不吸菸的女性肺癌患者，體內普遍存在一種稱為「APOBEC 變異」的特徵。請根據影片描述，解釋 APOBEC 的正常功能是什麼？它又是如何在「沒有外來致癌物」的情況下，導致基因突變的？</div>
+                <div class="answer-space">答：</div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">3.</div>
+                <div class="question-text">影片引用《Nature》期刊的研究，對「PM2.5 如何致癌」提出了顛覆性的看法。請根據影片內容，比較「傳統觀點」與「發炎致癌」這兩種假說，並解釋 EGFR 基因在此過程中扮演的角色。</div>
+                <div class="answer-space">答：</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">四、問題討論與學習任務</h2>
+            
+            <div class="question">
+                <div class="question-number">1.</div>
+                <div class="question-text">請比較「標靶治療（如 EGFR 抑制劑）」和「免疫治療（如 PD-L1 抑制劑）」這兩種現代癌症療法。哪一個比較像「修理汽車壞掉的引擎」，哪一個又比較像「鬆開被誤踩的煞車」？請解釋你的比喻。</div>
+                <div class="answer-space">答：</div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">2.</div>
+                <div class="question-text">影片提到，科學家對肺癌成因的理解，正從「DNA 突變」轉向「慢性發炎刺激已突變細胞生長」。這個觀念的轉變，對於肺癌的「預防策略」帶來了什麼巨大的衝擊？除了等待正在研發的 LungVax 疫苗，影片啟示我們可以從哪些方面著手預防？</div>
+                <div class="answer-space">答：</div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">3.</div>
+                <div class="question-text">請解釋免疫治療的分子作用機制。癌細胞如何利用 PD-L1 蛋白來逃避免疫系統的攻擊？而免疫檢查點抑制劑藥物又是如何反制這個機制的？請畫出示意圖，標示出 T 細胞、癌細胞、PD-1、PD-L1 以及藥物作用的位置。</div>
+                <div class="answer-space">答：</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">五、生物學知識評量</h2>
+            
+            <h3 class="subsection-title">一、單選題</h3>
+            
+            <div class="question">
+                <div class="question-number">( &nbsp;&nbsp;&nbsp; ) 1.</div>
+                <div class="question-text">根據本單元所學，台灣最常見的肺癌類型，且較常發生於女性及非吸菸者的是？</div>
+                <div class="options">
+                    <div class="option">(A) 小細胞肺癌</div>
+                    <div class="option">(B) 肺腺癌</div>
+                    <div class="option">(C) 鱗狀細胞癌</div>
+                    <div class="option">(D) 大細胞癌</div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">( &nbsp;&nbsp;&nbsp; ) 2.</div>
+                <div class="question-text">正常細胞中，p53 基因扮演著關鍵的「煞車」角色。它在細胞週期中的主要功能為何？</div>
+                <div class="options">
+                    <div class="option">(A) 促進細胞生長與分裂</div>
+                    <div class="option">(B) 在 DNA 受損時暫停細胞週期並啟動修復或凋亡</div>
+                    <div class="option">(C) 負責合成細胞分裂所需的蛋白質</div>
+                    <div class="option">(D) 幫助染色體在分裂時正確分離</div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">( &nbsp;&nbsp;&nbsp; ) 3.</div>
+                <div class="question-text">針對 EGFR 基因突變的標靶治療，其藥物作用的主要目標是阻斷癌細胞內的何種生理過程？</div>
+                <div class="options">
+                    <div class="option">(A) DNA 複製</div>
+                    <div class="option">(B) 蛋白質合成</div>
+                    <div class="option">(C) 異常的生長訊息傳遞</div>
+                    <div class="option">(D) 能量代謝</div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">( &nbsp;&nbsp;&nbsp; ) 4.</div>
+                <div class="question-text">免疫治療藥物（如 PD-1 抑制劑）能有效對抗癌症，其根本作用機制是？</div>
+                <div class="options">
+                    <div class="option">(A) 直接毒殺癌細胞</div>
+                    <div class="option">(B) 抑制癌細胞的血管新生</div>
+                    <div class="option">(C) 修復癌細胞中的突變基因</div>
+                    <div class="option">(D) 活化患者自身的 T 細胞，使其能辨識並攻擊癌細胞</div>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">二、多選題</h3>
+            
+            <div class="question">
+                <div class="question-number">( &nbsp;&nbsp;&nbsp; ) 5.</div>
+                <div class="question-text">下列哪些是台灣民眾（特別是非吸菸者）罹患肺癌的重要風險因子？（應選 3 項）</div>
+                <div class="options">
+                    <div class="option">(A) 廚房烹飪產生的油煙</div>
+                    <div class="option">(B) 規律的體育鍛鍊</div>
+                    <div class="option">(C) 具有肺癌家族史</div>
+                    <div class="option">(D) 接種流感疫苗</div>
+                    <div class="option">(E) 長期暴露於 PM2.5 等空氣污染物中</div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">( &nbsp;&nbsp;&nbsp; ) 6.</div>
+                <div class="question-text">關於小細胞肺癌（SCLC）的生物學特性，下列敘述哪些是正確的？（應選 3 項）</div>
+                <div class="options">
+                    <div class="option">(A) 生長速度緩慢，不易轉移</div>
+                    <div class="option">(B) 與吸菸有極高的關聯性</div>
+                    <div class="option">(C) 癌細胞惡性度高，容易在早期就發生遠端轉移</div>
+                    <div class="option">(D) 好發於靠近中央的大支氣管</div>
+                    <div class="option">(E) 主要治療方式為手術切除</div>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">三、閱讀題組</h3>
+            
+            <div class="reading-passage">
+                <h3>台灣肺癌地圖解密：不吸菸為何也會得肺癌？</h3>
+                
+                <p>肺癌長年高居台灣癌症死因之首，傳統觀念將其與吸菸劃上等號。然而，臨床數據顯示，台灣有超過半數的肺癌患者從不吸菸，其中女性患者更有高達九成以上為非吸菸者，且有年輕化趨勢。這個現象促使科學家思考：除了外在環境的致癌物，是否有內在的遺傳或生理因素，導致了東亞地區獨特的肺癌面貌？</p>
+                
+                <p>為解開謎團，中央研究院與台灣大學醫學院等機構組成的跨領域團隊，針對 103 名東亞地區的早期肺癌患者，進行了深入的蛋白基因體學研究，其成果於 2020 年榮登國際頂尖期刊《細胞》（Cell）的封面故事。</p>
+                
+                <p>研究團隊最大的發現，是找到了非吸菸肺癌患者體內一個重要的癌變特徵——「APOBEC 突變印記」。APOBEC 是一組存在於人體細胞內的酵素家族，其正常功能是編輯 RNA，在免疫防禦等方面扮演角色。然而，研究發現，這組酵素在某些情況下會「失控」，錯誤地作用於 DNA，導致 DNA 序列發生突變。這就像一位原本負責校對文稿的編輯，突然開始隨意修改原始手稿，造成內容錯誤。這種由身體內部機制自然產生的突變，稱為「內生性突變」。</p>
+                
+                <p>數據分析顯示，這種 APOBEC 突變特徵在特定族群中尤為顯著。在 60 歲以下、不吸菸的年輕女性肺癌患者中，高達 74% 的比例被檢測出高度的 APOBEC 突變特徵。這項發現強烈暗示，APOBEC 酵素的異常活化，可能是驅動台灣年輕女性罹患肺癌的關鍵內在因素之一，解釋了為何在沒有吸菸等外在風險因子的情況下，癌症依然會發生。</p>
+                
+                <p>此研究不僅為肺癌的成因提供了嶄新視角，更具備重要的臨床應用潛力。研究指出，帶有高度 APOBEC 突變特徵的腫瘤，與免疫治療的療效呈現正相關。這意味著，「APOBEC 突變印記」未來或許能成為一項重要的生物標誌物，用於早期肺癌的篩檢，並協助醫師判斷哪些患者可能對免疫治療反應較佳，從而實現更精準的個人化醫療。</p>
+            </div>
+
+            <div class="question">
+                <div class="question-number">( &nbsp;&nbsp;&nbsp; ) 1.</div>
+                <div class="question-text">根據本文，台灣科學家發現哪一項「內在因素」，可能是不吸菸女性罹患肺癌的關鍵驅動因子？（單選）</div>
+                <div class="options">
+                    <div class="option">(A) 表皮生長因子受體（EGFR）的普遍突變</div>
+                    <div class="option">(B) 肺部組織的慢性發炎反應</div>
+                    <div class="option">(C) 體內 APOBEC 酵素家族造成的突變特徵</div>
+                    <div class="option">(D) 由親代遺傳而來的特定癌症基因</div>
+                    <div class="option">(E) 體內排除空氣污染物的能力較差</div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">( &nbsp;&nbsp;&nbsp; ) 2.</div>
+                <div class="question-text">根據文章描述，APOBEC 酵素在人體細胞中正常的生理功能主要與下列何者相關？（單選）</div>
+                <div class="options">
+                    <div class="option">(A) 負責 DNA 的複製與修復</div>
+                    <div class="option">(B) 參與 RNA 的編輯過程</div>
+                    <div class="option">(C) 合成細胞膜所需的蛋白質</div>
+                    <div class="option">(D) 分解外來的毒素與致癌物</div>
+                    <div class="option">(E) 調控細胞週期的進行</div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">( &nbsp;&nbsp;&nbsp; ) 3.</div>
+                <div class="question-text">綜合本文資訊，APOBEC 突變特徵的研究成果，在未來的臨床醫學上可能有哪些應用價值？（應選 2 項）</div>
+                <div class="options">
+                    <div class="option">(A) 可用於研發直接殺死 APOBEC 酵素的化療藥物</div>
+                    <div class="option">(B) 可作為早期肺癌篩檢的潛在生物標誌物</div>
+                    <div class="option">(C) 可發展成預防 PM2.5 造成肺部損傷的疫苗</div>
+                    <div class="option">(D) 可用於預測患者接受免疫治療的可能效果</div>
+                    <div class="option">(E) 可提供肺癌患者飲食調整的具體建議</div>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">四、素養探究題組</h3>
+            
+            <div class="reading-passage" style="border-color: #5cb85c; background: #f0fff4;">
+                <h3 style="color: #5cb85c;">探究 PM2.5 與肺癌的「二階段致癌」假說</h3>
+                
+                <p><strong>情境：</strong>過去科學家普遍認為，空氣污染（如 PM2.5）中的致癌物會直接破壞細胞的 DNA，引發基因突變而導致癌症。然而，影片中提到一個顛覆性的新觀點：「二階段致癌」假說。此假說認為，許多人體內早已存在帶有致癌基因突變的「潛伏細胞」（第一階段：啟動），但這些細胞處於休眠狀態。直到某些「促發因子」出現（第二階段：促進），才會喚醒這些細胞，使其快速增殖形成腫瘤。</p>
+                
+                <p><strong>實驗設計：</strong>為了驗證 PM2.5 是否扮演「促發因子」的角色，科學家設計了以下動物實驗。他們使用了一批經過基因工程改造、肺部細胞已帶有致癌基因 EGFR 突變但尚未發病的小鼠，並將其隨機分為三組進行為期十週的實驗：</p>
+                
+                <ul style="margin-left: 30px; line-height: 1.9;">
+                    <li><strong>A 組（對照組）：</strong>飼養於獨立艙中，僅吸入經過濾的乾淨空氣。</li>
+                    <li><strong>B 組（實驗組）：</strong>飼養於獨立艙中，吸入含有 PM2.5 微粒的空氣。</li>
+                    <li><strong>C 組（藥物介入組）：</strong>飼養於獨立艙中，吸入含 PM2.5 的空氣，並同時為小鼠注射一種能阻斷發炎因子「介白素-1β（IL-1β）」的抗體藥物。</li>
+                </ul>
+                
+                <p><strong>實驗結果：</strong>十週後，科學家犧牲所有小鼠，並計算各組小鼠肺部最終生成腫瘤的數量，結果如下表。</p>
+            </div>
+
+            <table class="experiment-table">
+                <thead>
+                    <tr>
+                        <th>組別</th>
+                        <th>處理方式</th>
+                        <th>實驗小鼠數量</th>
+                        <th>最終長出肺部腫瘤的小鼠數量</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>A 組</strong></td>
+                        <td>吸入過濾空氣</td>
+                        <td>20</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td><strong>B 組</strong></td>
+                        <td>吸入含 PM2.5 的空氣</td>
+                        <td>20</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td><strong>C 組</strong></td>
+                        <td>吸入含 PM2.5 空氣＋注射 IL-1β 抑制劑</td>
+                        <td>20</td>
+                        <td>2</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="question">
+                <div class="question-number">( &nbsp;&nbsp;&nbsp; ) 1.</div>
+                <div class="question-text">比較 A 組與 B 組的實驗結果，可以直接得出下列哪一項最合理的推論？（單選）</div>
+                <div class="options">
+                    <div class="option">(A) PM2.5 是唯一導致肺癌發生的原因</div>
+                    <div class="option">(B) 只要帶有 EGFR 基因突變就一定會罹患肺癌</div>
+                    <div class="option">(C) PM2.5 暴露會顯著「促進」帶有 EGFR 突變的細胞發展成腫瘤</div>
+                    <div class="option">(D) 所有吸入 PM2.5 的小鼠最終都會長出腫瘤</div>
+                    <div class="option">(E) 吸入乾淨空氣可以完全治癒 EGFR 基因突變</div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">( &nbsp;&nbsp;&nbsp; ) 2.</div>
+                <div class="question-text">關於本實驗的設計，下列敘述哪些是正確的？（應選 2 項）</div>
+                <div class="options">
+                    <div class="option">(A) 本實驗的應變變因為「是否吸入 PM2.5」</div>
+                    <div class="option">(B) A 組的設置是為了作為一個基準線，以釐清 PM2.5 的實際影響</div>
+                    <div class="option">(C) 本實驗的操縱變因為「小鼠肺部腫瘤的數量」</div>
+                    <div class="option">(D) C 組的設計目的在於探討「發炎反應」在 PM2.5 致癌過程中扮演的角色</div>
+                    <div class="option">(E) 實驗所用的小鼠為一般健康、未經任何基因改造的品種</div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">非選題 3：</div>
+                <div class="question-text">比較 B 組與 C 組的結果，請說明發炎因子「IL-1β」在 PM2.5 促使肺癌形成的過程中，可能扮演什麼樣的角色？</div>
+                <div class="answer-space">答案：</div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">非選題 4：</div>
+                <div class="question-text">請綜合整個實驗的設計與結果，解釋本實驗如何支持「二階段致癌」假說（啟動＋促進）？</div>
+                <div class="answer-space">答案：</div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px; padding-top: 30px; border-top: 2px solid #ddd; color: #999; font-size: 14px;">
+            <p>本學習單改編自 YouTube 影片《不抽菸也會得肺癌！？肺癌為何榮登榜首？》</p>
+            <p style="margin-top: 10px;">© 2025 生物科教學資源</p>
+        </div>
+    </div>
+</body>
+</html>

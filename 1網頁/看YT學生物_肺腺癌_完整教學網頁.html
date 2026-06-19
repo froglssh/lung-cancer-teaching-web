@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>看YT學生物：肺腺癌 | 臺北市立麗山高中生物科林獻升老師製作</title>
+  <style>
+    :root {
+      --ink: #172026;
+      --muted: #59656f;
+      --line: #d9e1e8;
+      --paper: #fbfcfd;
+      --panel: #ffffff;
+      --blue: #1f6feb;
+      --teal: #00897b;
+      --coral: #cf4b3f;
+      --gold: #b7791f;
+      --green: #2f855a;
+      --shadow: 0 18px 50px rgba(23, 32, 38, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.75;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      padding: 10px 5vw;
+      background: rgba(255, 255, 255, 0.92);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(12px);
+    }
+
+    .brand {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--teal);
+      white-space: nowrap;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 6px;
+    }
+
+    .nav a {
+      padding: 6px 10px;
+      border-radius: 7px;
+      text-decoration: none;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .nav a:hover {
+      background: #eef6f6;
+      color: var(--teal);
+    }
+
+    .hero {
+      min-height: 92vh;
+      display: grid;
+      grid-template-columns: minmax(0, 1.02fr) minmax(320px, 0.98fr);
+      align-items: center;
+      gap: 38px;
+      padding: 54px 5vw 44px;
+      background:
+        linear-gradient(120deg, rgba(255,255,255,0.97), rgba(255,255,255,0.74)),
+        url("../肺腺癌介紹資訊圖.png") center right / contain no-repeat;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+      padding: 7px 12px;
+      border: 1px solid #b8ded9;
+      border-radius: 999px;
+      color: var(--teal);
+      background: #edfafa;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(38px, 5vw, 72px);
+      line-height: 1.06;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      max-width: 780px;
+      margin: 20px 0 0;
+      font-size: 18px;
+      color: #33424f;
+    }
+
+    .teacher-mark {
+      margin-top: 18px;
+      font-weight: 800;
+      color: var(--coral);
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 9px 15px;
+      border-radius: 7px;
+      border: 1px solid var(--line);
+      background: white;
+      text-decoration: none;
+      font-weight: 700;
+      color: var(--ink);
+      box-shadow: 0 4px 14px rgba(23, 32, 38, 0.06);
+    }
+
+    .btn.primary {
+      border-color: var(--blue);
+      background: var(--blue);
+      color: white;
+    }
+
+    .video-shell {
+      background: #0f1720;
+      border: 1px solid #1d2a35;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .video-wrap {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      background: #101820;
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
+    video {
+      object-fit: contain;
+      background: #101820;
+    }
+
+    .video-caption {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 13px 16px;
+      color: #dbe7ef;
+      font-size: 14px;
+    }
+
+    .video-caption a {
+      color: #bfe9e4;
+      font-weight: 800;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .video-caption a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      width: min(1180px, 90vw);
+      margin: 0 auto;
+    }
+
+    section {
+      padding: 54px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 30px;
+      line-height: 1.2;
+    }
+
+    .section-head p {
+      max-width: 620px;
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid.three {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .grid.two {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 10px 28px rgba(23, 32, 38, 0.06);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      line-height: 1.35;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .metric {
+      border-top: 5px solid var(--teal);
+    }
+
+    .metric:nth-child(2) {
+      border-top-color: var(--coral);
+    }
+
+    .metric:nth-child(3) {
+      border-top-color: var(--gold);
+    }
+
+    .tag {
+      display: inline-flex;
+      margin-bottom: 10px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: #eff4f8;
+      color: #33424f;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th,
+    td {
+      padding: 13px 14px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th {
+      background: #eef6f6;
+      color: #17433f;
+      font-weight: 800;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .step {
+      position: relative;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: white;
+    }
+
+    .step b {
+      display: block;
+      color: var(--blue);
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .concept {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+      align-items: stretch;
+    }
+
+    .concept .node {
+      min-height: 124px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 17px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: white;
+    }
+
+    .node strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--teal);
+      font-size: 18px;
+    }
+
+    .resource-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .resource {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      padding: 13px 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: white;
+      text-decoration: none;
+    }
+
+    .resource:hover {
+      border-color: var(--teal);
+      background: #f3fbfa;
+    }
+
+    .resource span:first-child {
+      font-weight: 700;
+    }
+
+    .resource span:last-child {
+      flex: 0 0 auto;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .media-panel {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 22px;
+      align-items: start;
+    }
+
+    .media-panel img {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: white;
+    }
+
+    audio {
+      width: 100%;
+      margin-top: 12px;
+    }
+
+    .question {
+      border-left: 5px solid var(--blue);
+    }
+
+    .question:nth-child(2n) {
+      border-left-color: var(--teal);
+    }
+
+    details {
+      margin-top: 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: white;
+      overflow: hidden;
+    }
+
+    summary {
+      cursor: pointer;
+      padding: 13px 16px;
+      font-weight: 800;
+      color: var(--teal);
+      background: #f5fbfb;
+    }
+
+    details > div {
+      padding: 16px;
+      color: #33424f;
+    }
+
+    .answer-space {
+      min-height: 72px;
+      margin-top: 10px;
+      border: 1px dashed #aab7c2;
+      border-radius: 8px;
+      background: #fbfcfd;
+    }
+
+    .footer {
+      padding: 34px 5vw;
+      color: white;
+      background: #172026;
+    }
+
+    .footer a {
+      color: #bfe9e4;
+    }
+
+    @media (max-width: 920px) {
+      .hero,
+      .media-panel,
+      .grid.two,
+      .grid.three,
+      .timeline,
+      .concept,
+      .resource-list {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+        background:
+          linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.86)),
+          url("../肺腺癌介紹資訊圖.png") center bottom / 78% auto no-repeat;
+        padding-bottom: 360px;
+      }
+
+      .section-head {
+        display: block;
+      }
+
+      .section-head p {
+        margin-top: 10px;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav {
+        justify-content: flex-start;
+      }
+
+      .hero {
+        padding: 34px 6vw 280px;
+      }
+
+      h1 {
+        font-size: 38px;
+      }
+
+      th,
+      td {
+        padding: 10px;
+        font-size: 14px;
+      }
+    }
+
+    @media print {
+      .topbar,
+      .cta-row,
+      .video-shell {
+        display: none;
+      }
+
+      body,
+      .hero {
+        background: white;
+      }
+
+      section {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">臺北市立麗山高中生物科林獻升老師製作</div>
+    <nav class="nav" aria-label="頁面導覽">
+      <a href="#overview">課程核心</a>
+      <a href="#concepts">知識整理</a>
+      <a href="#lesson">教學流程</a>
+      <a href="#worksheet">學習任務</a>
+      <a href="#resources">素材連結</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <div class="kicker">看 YT 學生物</div>
+      <h1>看YT學生物：肺腺癌</h1>
+      <p>以「不抽菸也會得肺癌？」這支影片為起點，整合肺腺癌、APOBEC 內生性突變、PM2.5 慢性發炎、EGFR 標靶治療與 PD-1/PD-L1 免疫治療，讓學生從生活風險一路走到分子機制與公共衛生思辨。</p>
+      <div class="teacher-mark">臺北市立麗山高中生物科林獻升老師製作</div>
+      <div class="cta-row">
+        <a class="btn primary" href="https://youtu.be/4tDDfywYftk?si=nnDHiuINqsagTO6s" target="_blank" rel="noopener">開啟 YouTube 影片</a>
+        <a class="btn" href="../看YT學生物_肺腺癌學習單（學生版）_1節.pdf">學生版學習單</a>
+        <a class="btn" href="../看YT學生物_肺腺癌學習單（教師版）_1節.pdf">教師版詳解</a>
+      </div>
+    </div>
+
+    <div class="video-shell">
+      <div class="video-wrap">
+        <video controls preload="metadata" poster="../肺腺癌介紹資訊圖.png">
+          <source src="../0影片/不抽菸也會得肺癌！？肺癌為何榮登榜首？難道是基因出問題了？【挺健康】.mp4" type="video/mp4">
+          您的瀏覽器無法播放此影片，請使用下方 YouTube 連結開啟。
+        </video>
+      </div>
+      <div class="video-caption">
+        <span>主影片本機播放：挺健康｜肺癌、基因、空污與精準醫療</span>
+        <a href="https://youtu.be/4tDDfywYftk?si=nnDHiuINqsagTO6s" target="_blank" rel="noopener">前往 YouTube</a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section id="overview">
+      <div class="section-head">
+        <h2>課程核心</h2>
+        <p>本頁整合資料夾內的學習單、教案、簡報、補充報導、資訊圖、影音檔與 YouTube 連結，形成一份可直接上課使用的教學入口。</p>
+      </div>
+      <div class="grid three">
+        <article class="card metric">
+          <span class="tag">核心問題</span>
+          <h3>不抽菸，為什麼也會得肺癌？</h3>
+          <p>以台灣非吸菸女性肺癌比例偏高為切入點，討論肺腺癌與吸菸以外風險因子，包括家族史、廚房油煙、PM2.5 與內生性基因變異。</p>
+        </article>
+        <article class="card metric">
+          <span class="tag">分子機制</span>
+          <h3>從突變到發炎的二階段致癌</h3>
+          <p>將癌症理解從「外來致癌物直接破壞 DNA」推進到「既有突變細胞被慢性發炎喚醒」，連結 EGFR、IL-1β 與 PM2.5。</p>
+        </article>
+        <article class="card metric">
+          <span class="tag">醫療科技</span>
+          <h3>標靶治療與免疫治療</h3>
+          <p>比較 EGFR 抑制劑像「關掉失控引擎」，PD-1/PD-L1 免疫檢查點抑制劑像「放開免疫煞車」，強化學生對精準醫療的理解。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="concepts">
+      <div class="section-head">
+        <h2>知識整理</h2>
+        <p>由資料夾內教師版教案、學習單與補充資料整理成課堂可讀的重點框架。</p>
+      </div>
+
+      <div class="media-panel">
+        <div>
+          <img src="../肺腺癌介紹資訊圖.png" alt="肺腺癌介紹資訊圖">
+        </div>
+        <div class="grid">
+          <article class="card">
+            <h3>肺腺癌為何常被稱為無聲的殺手？</h3>
+            <p>肺腺癌常發生於肺部周邊、肺泡與細支氣管附近，此區神經末梢較少，早期腫瘤不一定刺激中央氣道，因此較不容易出現明顯咳嗽或咳血。等到症狀明顯時，病程可能已經進展。</p>
+          </article>
+          <article class="card">
+            <h3>APOBEC 突變印記</h3>
+            <p>APOBEC 原本參與 RNA 編輯與免疫防禦，但當它錯誤作用於 DNA 時，可能產生內生性突變。教師版資料指出，在年輕非吸菸女性肺癌患者中，APOBEC 變異特徵具有重要解釋力與臨床潛力。</p>
+          </article>
+          <article class="card">
+            <h3>PM2.5 與慢性發炎</h3>
+            <p>新觀點強調 PM2.5 不一定只是直接造成新突變，也可能透過肺部慢性發炎、IL-1β 等發炎訊號，促使已帶有 EGFR 突變的潛伏細胞增殖成腫瘤。</p>
+          </article>
+        </div>
+      </div>
+
+      <h3>肺癌類型比較</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>特徵</th>
+            <th>小細胞肺癌 SCLC</th>
+            <th>肺腺癌 Adenocarcinoma</th>
+            <th>鱗狀細胞癌 Squamous Cell</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>主要風險因子</td>
+            <td>吸菸高度相關</td>
+            <td>非吸菸者較常見；與 PM2.5、家族史、APOBEC 變異、廚房油煙等相關</td>
+            <td>吸菸高度相關</td>
+          </tr>
+          <tr>
+            <td>好發位置</td>
+            <td>肺部中央、靠近主要支氣管</td>
+            <td>肺部周邊、肺泡與細支氣管區域</td>
+            <td>肺部中央、靠近主要支氣管</td>
+          </tr>
+          <tr>
+            <td>生長與症狀</td>
+            <td>生長快、惡性度高、早期容易遠端轉移</td>
+            <td>早期常無症狀，可能因晚期才發現而提高治療難度</td>
+            <td>較可能早期刺激中央氣道，出現咳嗽、咳血等症狀</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="concept" aria-label="概念流程">
+        <div class="node">
+          <strong>啟動</strong>
+          EGFR 或 APOBEC 等突變讓細胞取得癌變潛力。
+        </div>
+        <div class="node">
+          <strong>促進</strong>
+          PM2.5 誘發慢性發炎，IL-1β 可能喚醒潛伏突變細胞。
+        </div>
+        <div class="node">
+          <strong>介入</strong>
+          標靶治療阻斷異常生長訊號；免疫治療解除 T 細胞煞車。
+        </div>
+      </div>
+    </section>
+
+    <section id="lesson">
+      <div class="section-head">
+        <h2>50 分鐘教學流程</h2>
+        <p>依教師版教案整理，適合一節課完成影片觀看、概念建構、討論與總結。</p>
+      </div>
+      <div class="timeline">
+        <article class="step">
+          <b>5 分鐘</b>
+          <strong>引起動機</strong>
+          <p>用「肺癌為何成為新國病」與「非吸菸者為何也罹癌」挑戰學生既有印象。</p>
+        </article>
+        <article class="step">
+          <b>15 分鐘</b>
+          <strong>影片觀看</strong>
+          <p>提醒學生抓三個訊息：APOBEC、PM2.5 發炎致癌、未來預防策略。</p>
+        </article>
+        <article class="step">
+          <b>20 分鐘</b>
+          <strong>分組建構</strong>
+          <p>完成肺癌類型比較、課本連結與現代癌症療法比喻任務。</p>
+        </article>
+        <article class="step">
+          <b>10 分鐘</b>
+          <strong>分享總結</strong>
+          <p>回扣二階段致癌、精準醫療、抗發炎與 LDCT 篩檢的公衛意義。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="worksheet">
+      <div class="section-head">
+        <h2>學習任務與教師提示</h2>
+        <p>保留學生作答空間，並將教師參考答案收在可展開區塊中，方便上課投影或自學使用。</p>
+      </div>
+      <div class="grid two">
+        <article class="card question">
+          <h3>任務一：用解剖構造解釋無症狀</h3>
+          <p>肺腺癌常被稱為「無聲的殺手」，請從肺部周邊、肺泡、細支氣管與神經末梢分布的角度說明。</p>
+          <div class="answer-space"></div>
+          <details>
+            <summary>教師提示</summary>
+            <div>肺腺癌好發於肺部周邊，早期較不會刺激主要支氣管，因此不易造成明顯咳嗽；相較之下，中央型腫瘤較容易壓迫或刺激氣道，引發症狀。</div>
+          </details>
+        </article>
+
+        <article class="card question">
+          <h3>任務二：APOBEC 與內生性突變</h3>
+          <p>APOBEC 的正常功能是什麼？它如何在沒有外來致癌物的情況下造成突變？</p>
+          <div class="answer-space"></div>
+          <details>
+            <summary>教師提示</summary>
+            <div>APOBEC 是核酸編輯相關酵素，正常參與 RNA 編輯與免疫防禦；若錯誤作用於 DNA，可能導致序列改變，形成身體內部機制自然產生的突變來源。</div>
+          </details>
+        </article>
+
+        <article class="card question">
+          <h3>任務三：PM2.5 的二階段致癌</h3>
+          <p>比較「直接破壞 DNA」與「慢性發炎喚醒已突變細胞」兩種觀點，並說明 EGFR 在其中扮演的角色。</p>
+          <div class="answer-space"></div>
+          <details>
+            <summary>教師提示</summary>
+            <div>EGFR 突變可視為癌變種子；PM2.5 引發的慢性發炎與 IL-1β 訊號像土壤與肥料，促進原本休眠的突變細胞增殖。</div>
+          </details>
+        </article>
+
+        <article class="card question">
+          <h3>任務四：標靶與免疫治療比喻</h3>
+          <p>哪一種療法像修理失控引擎？哪一種像鬆開被誤踩的煞車？請用 EGFR 與 PD-1/PD-L1 說明。</p>
+          <div class="answer-space"></div>
+          <details>
+            <summary>教師提示</summary>
+            <div>EGFR 標靶治療直接阻斷癌細胞內異常生長訊息，像關掉失控引擎；免疫治療阻斷 PD-1/PD-L1，使 T 細胞恢復攻擊能力，像鬆開免疫煞車。</div>
+          </details>
+        </article>
+      </div>
+
+      <details>
+        <summary>閱讀素養題組：PM2.5、IL-1β 與小鼠實驗</summary>
+        <div>
+          <p>實驗設計使用肺部細胞已帶有 EGFR 突變但尚未發病的小鼠，分為吸入過濾空氣、吸入 PM2.5、吸入 PM2.5 並注射 IL-1β 抑制劑三組。結果為 A 組 1/20、B 組 12/20、C 組 2/20 長出肺部腫瘤。</p>
+          <p><strong>判讀重點：</strong>B 組大幅高於 A 組，支持 PM2.5 具有促進作用；C 組接近 A 組，顯示 IL-1β 發炎訊號可能是 PM2.5 促進腫瘤形成的重要橋樑。此結果支持「啟動加促進」的二階段致癌假說。</p>
+        </div>
+      </details>
+    </section>
+
+    <section id="resources">
+      <div class="section-head">
+        <h2>資料夾素材連結</h2>
+        <p>下列連結對應到目前資料夾中的所有主要素材；網頁與素材放在同一資料夾結構中時可直接開啟。</p>
+      </div>
+
+      <div class="grid two">
+        <article class="card">
+          <h3>影片與音訊</h3>
+          <div class="resource-list">
+            <a class="resource" href="https://youtu.be/4tDDfywYftk?si=nnDHiuINqsagTO6s" target="_blank" rel="noopener"><span>YouTube 主影片</span><span>YT</span></a>
+            <a class="resource" href="../0影片/不抽菸也會得肺癌！？肺癌為何榮登榜首？難道是基因出問題了？【挺健康】.mp4"><span>主影片本機檔</span><span>MP4</span></a>
+            <a class="resource" href="../3影音/隱形殺手：揭開肺癌與空氣污染的關聯.mp4"><span>隱形殺手：肺癌與空污</span><span>MP4</span></a>
+            <a class="resource" href="../3影音/空污、基因迷思與抗癌新趨勢：從不吸菸肺癌到精準個人化照護深度解析.m4a"><span>深度解析音訊</span><span>M4A</span></a>
+          </div>
+          <audio controls src="../3影音/空污、基因迷思與抗癌新趨勢：從不吸菸肺癌到精準個人化照護深度解析.m4a"></audio>
+        </article>
+
+        <article class="card">
+          <h3>學習單與教案</h3>
+          <div class="resource-list">
+            <a class="resource" href="../看YT學生物_肺腺癌學習單（學生版）_1節.pdf"><span>學生版學習單</span><span>PDF</span></a>
+            <a class="resource" href="../看YT學生物_肺腺癌學習單（教師版）_1節.pdf"><span>教師版詳解</span><span>PDF</span></a>
+            <a class="resource" href="../看YT學生物_肺腺癌學習單（學生版）_1節.docx"><span>學生版可編輯檔</span><span>DOCX</span></a>
+            <a class="resource" href="../看YT學生物_肺腺癌學習單（教師版）_1節.docx"><span>教師版可編輯檔</span><span>DOCX</span></a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>簡報與補充資料</h3>
+          <div class="resource-list">
+            <a class="resource" href="../2簡報/解密新國病肺癌筆記簡報LM.pdf"><span>解密新國病肺癌筆記簡報</span><span>PDF</span></a>
+            <a class="resource" href="../2簡報/空氣污染與肺部健康_skywork.pdf"><span>空氣污染與肺部健康</span><span>PDF</span></a>
+            <a class="resource" href="../2簡報/空氣污染與肺部健康_skywork.pptx"><span>空氣污染與肺部健康</span><span>PPTX</span></a>
+            <a class="resource" href="../2簡報/破解癌細胞隱形斗篷_教師版學習單簡報.pdf"><span>破解癌細胞隱形斗篷</span><span>PDF</span></a>
+            <a class="resource" href="../2簡報/封面：不抽菸也會得肺癌？.pptx"><span>封面簡報</span><span>PPTX</span></a>
+            <a class="resource" href="../4補充/肺癌；肺腺癌詳細深入研究報導，包含定義’種類‘成因‘症狀’治療等.pdf"><span>肺癌與肺腺癌深入研究報導</span><span>PDF</span></a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>既有網頁與資訊圖</h3>
+          <div class="resource-list">
+            <a class="resource" href="看YT學生物_肺腺癌學習單（學生版）_1節_網頁.html"><span>原學生版網頁</span><span>HTML</span></a>
+            <a class="resource" href="看YT學生物_肺腺癌學習單（教師版）_1節_網頁.html"><span>原教師版網頁</span><span>HTML</span></a>
+            <a class="resource" href="../肺腺癌介紹資訊圖.png"><span>肺腺癌介紹資訊圖</span><span>PNG</span></a>
+            <a class="resource" href="看YT學生物_肺腺癌學習單（教師版）_1節_網頁.pdf"><span>原教師版網頁 PDF</span><span>PDF</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>延伸討論</h2>
+        <p>可作為課後作業、小組討論或下一節課的探究起點。</p>
+      </div>
+      <div class="grid three">
+        <article class="card">
+          <h3>公共衛生</h3>
+          <p>若肺癌預防不只是不吸菸，政府、社區與個人應如何分工面對 PM2.5、廚房油煙與篩檢政策？</p>
+        </article>
+        <article class="card">
+          <h3>科學本質</h3>
+          <p>當新研究改變「PM2.5 如何致癌」的解釋時，這代表舊理論錯了，還是代表科學模型變得更完整？</p>
+        </article>
+        <article class="card">
+          <h3>精準醫療</h3>
+          <p>為什麼同樣是肺癌，治療前需要先檢測 EGFR、PD-L1 或其他生物標誌物？這對病人與醫療資源有何意義？</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <strong>看YT學生物：肺腺癌</strong><br>
+    臺北市立麗山高中生物科林獻升老師製作。素材整合自「114年教案/看YT學生物_肺腺癌」資料夾，包含影片、學習單、教師版詳解、簡報、補充報導、資訊圖與既有網頁檔。
+  </footer>
+</body>
+</html>
